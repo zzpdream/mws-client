@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context="com.ydd.conference.ui.SetSeatActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_site"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_middle" />
+
+
+            <EditText
+                android:id="@+id/seatEdit"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="请设置座位号"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/text_size_5" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lable_terminal_type"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_middle" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/firstRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正式终端"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_5" />
+
+                <RadioButton
+                    android:id="@+id/secondRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="列席终端"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_5" />
+
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/typeSpinner"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="服务器地址:"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_middle" />
+
+
+            <EditText
+                android:id="@+id/ipEdit"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="请输入服务器地址"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/text_size_5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="服务器端口:"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_middle" />
+
+
+            <EditText
+                android:id="@+id/portEdit"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="请输入服务器端口"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/text_size_5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="本机ip:"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_middle" />
+
+
+            <EditText
+                android:id="@+id/localIpEdit"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="请输入本机ip"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/text_size_5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/submitText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_middle" />
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/backText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_middle" />
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/setIpText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:padding="20dp"
+                android:text="IP设置"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_5" />
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/settingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:padding="20dp"
+                android:text="进入设置页面"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_5" />
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/optionBarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:padding="20dp"
+                android:text="显示虚拟按键"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_5" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

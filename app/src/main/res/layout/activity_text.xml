@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+
+    tools:context="com.ydd.conference.ui.TextActivity">
+
+    <com.ydd.conference.custom.HuaWenTextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:lineSpacingExtra="10dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="90sp" />
+
+    <TextView
+        android:id="@+id/voteAgreeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="投赞成票"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/voteAgainstText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:padding="20dp"
+        android:text="投反对票"
+        android:textColor="@color/white"
+
+        android:textSize="30sp"
+        android:visibility="gone" />
+
+
+</FrameLayout>

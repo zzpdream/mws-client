@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue"
+        android:orientation="vertical"
+        tools:context="com.ydd.conference.ui.VoteActivity">
+
+        <com.ydd.conference.custom.HuaWenTextView
+            android:id="@+id/voteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="已表决:  0/20"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_6_5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/flax" />
+
+        <com.ydd.conference.custom.HuaWenTextView
+            android:id="@+id/allText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_rect_stroke_white"
+            android:gravity="center"
+            android:padding="18dp"
+            android:text="所有项"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_middle" />
+
+        <com.ydd.conference.custom.InterceptLinearLayout
+            android:id="@+id/resultLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/style_vote_linear">
+
+                <FrameLayout
+                    android:id="@+id/frameLayout1"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name1Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout2"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name2Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout3"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name3Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout4"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name4Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/style_vote_linear">
+
+                <FrameLayout
+                    android:id="@+id/frameLayout5"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name5Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout6"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name6Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout7"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name7Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout8"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name8Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/style_vote_linear">
+
+                <FrameLayout
+                    android:id="@+id/frameLayout9"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name9Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout10"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name10Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout11"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name11Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout12"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name12Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/style_vote_linear">
+
+                <FrameLayout
+                    android:id="@+id/frameLayout13"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name13Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout14"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name14Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout15"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name15Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout16"
+                    style="@style/style_vote_layout">
+
+                    <com.ydd.conference.custom.HuaWenTextView
+                        android:id="@+id/name16Text"
+                        style="@style/style_vote_name"
+                        android:text="方某某">
+
+                    </com.ydd.conference.custom.HuaWenTextView>
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </com.ydd.conference.custom.InterceptLinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/submitLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.ydd.conference.custom.HuaWenTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否提交?"
+            android:textColor="@color/white"
+            android:textSize="100sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="140dp"
+            android:orientation="horizontal">
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/submitText"
+                style="@style/style_submit_text"
+                android:background="@mipmap/btn_submit_bg"
+                android:text="提交" />
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/cancelText"
+                style="@style/style_submit_text"
+                android:layout_marginLeft="150dp"
+                android:text="取消" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

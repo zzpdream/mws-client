@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/blue"
+              android:orientation="vertical"
+              tools:context="com.ydd.conference.ui.VoteResultNewActivity">
+
+    <com.ydd.conference.custom.HuaWenTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="多项表决结果"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_6_5"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/flax"/>
+
+    <LinearLayout
+        android:id="@+id/resultLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout style="@style/style_vote_result_item_layout">
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+                style="@style/style_vote_result_item_text"
+                android:layout_weight="2"
+                android:gravity="left"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+
+                style="@style/style_vote_result_item_text"
+                android:text="赞成"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                style="@style/style_vote_result_item_text"
+                android:text="反对"/>
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+                style="@style/style_vote_result_item_text"
+                android:text="弃权"
+                android:textColor="@color/white"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                style="@style/style_vote_result_item_text"
+                android:text="未按"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/style_vote_result_item_layout">
+
+
+            <LinearLayout style="@style/style_vote_result_name_layout">
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/number1Text"
+                    style="@style/style_vote_result_number_text"
+                    android:text="1. "/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/name1Text"
+                    style="@style/style_vote_result_name"
+                    android:text="李涛"/>
+
+            </LinearLayout>
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+
+                android:id="@+id/agree1Text"
+                style="@style/style_vote_result_item_text"
+                android:text="赞成"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/against1Text"
+                style="@style/style_vote_result_item_text"
+                android:text="反对"/>
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/absent1Text"
+                style="@style/style_vote_result_item_text"
+                android:text="弃权"
+                android:textColor="@color/white"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/miss1Text"
+                style="@style/style_vote_result_item_text"
+                android:text="未按"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/style_vote_result_item_layout">
+
+            <LinearLayout style="@style/style_vote_result_name_layout">
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/number2Text"
+                    style="@style/style_vote_result_number_text"
+                    android:text="1. "/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/name2Text"
+                    style="@style/style_vote_result_name"
+                    android:text="李涛"/>
+
+            </LinearLayout>
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+
+                android:id="@+id/agree2Text"
+                style="@style/style_vote_result_item_text"
+                android:text="赞成"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/against2Text"
+                style="@style/style_vote_result_item_text"
+                android:text="反对"/>
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/absent2Text"
+                style="@style/style_vote_result_item_text"
+                android:text="弃权"
+                android:textColor="@color/white"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/miss2Text"
+                style="@style/style_vote_result_item_text"
+                android:text="未按"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/style_vote_result_item_layout">
+
+            <LinearLayout style="@style/style_vote_result_name_layout">
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/number3Text"
+                    style="@style/style_vote_result_number_text"
+                    android:text="1. "/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/name3Text"
+                    style="@style/style_vote_result_name"
+                    android:text="李涛"/>
+
+            </LinearLayout>
+
+            <com.ydd.conference.custom.HuaWenTextView
+
+                android:id="@+id/agree3Text"
+                style="@style/style_vote_result_item_text"
+                android:text="赞成"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/against3Text"
+                style="@style/style_vote_result_item_text"
+                android:text="反对"/>
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/absent3Text"
+                style="@style/style_vote_result_item_text"
+                android:text="弃权"
+                android:textColor="@color/white"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/miss3Text"
+                style="@style/style_vote_result_item_text"
+                android:text="未按"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/style_vote_result_item_layout">
+
+            <LinearLayout style="@style/style_vote_result_name_layout">
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/number4Text"
+                    style="@style/style_vote_result_number_text"
+                    android:text="1. "/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/name4Text"
+                    style="@style/style_vote_result_name"
+                    android:text="李涛"/>
+
+            </LinearLayout>
+
+            <com.ydd.conference.custom.HuaWenTextView
+
+                android:id="@+id/agree4Text"
+                style="@style/style_vote_result_item_text"
+                android:text="赞成"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/against4Text"
+                style="@style/style_vote_result_item_text"
+                android:text="反对"/>
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/absent4Text"
+                style="@style/style_vote_result_item_text"
+                android:text="弃权"
+                android:textColor="@color/white"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/miss4Text"
+                style="@style/style_vote_result_item_text"
+                android:text="未按"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/style_vote_result_item_layout">
+
+            <LinearLayout style="@style/style_vote_result_name_layout">
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/number5Text"
+                    style="@style/style_vote_result_number_text"
+                    android:text="1. "/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/name5Text"
+                    style="@style/style_vote_result_name"
+                    android:text="李涛"/>
+
+            </LinearLayout>
+
+            <com.ydd.conference.custom.HuaWenTextView
+
+                android:id="@+id/agree5Text"
+                style="@style/style_vote_result_item_text"
+                android:text="赞成"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/against5Text"
+                style="@style/style_vote_result_item_text"
+                android:text="反对"/>
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/absent5Text"
+                style="@style/style_vote_result_item_text"
+                android:text="弃权"
+                android:textColor="@color/white"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/miss5Text"
+                style="@style/style_vote_result_item_text"
+                android:text="未按"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/style_vote_result_item_layout">
+
+            <LinearLayout style="@style/style_vote_result_name_layout">
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/number6Text"
+                    style="@style/style_vote_result_number_text"
+                    android:text="1. "/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/name6Text"
+                    style="@style/style_vote_result_name"
+                    android:text="李涛"/>
+
+            </LinearLayout>
+
+            <com.ydd.conference.custom.HuaWenTextView
+
+                android:id="@+id/agree6Text"
+                style="@style/style_vote_result_item_text"
+                android:text="赞成"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/against6Text"
+                style="@style/style_vote_result_item_text"
+                android:text="反对"/>
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/absent6Text"
+                style="@style/style_vote_result_item_text"
+                android:text="弃权"
+                android:textColor="@color/white"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/miss6Text"
+                style="@style/style_vote_result_item_text"
+                android:text="未按"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/style_vote_result_item_layout">
+
+            <LinearLayout style="@style/style_vote_result_name_layout">
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/number7Text"
+                    style="@style/style_vote_result_number_text"
+                    android:text="1. "/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/name7Text"
+                    style="@style/style_vote_result_name"
+                    android:text="李涛"/>
+
+            </LinearLayout>
+
+            <com.ydd.conference.custom.HuaWenTextView
+
+                android:id="@+id/agree7Text"
+                style="@style/style_vote_result_item_text"
+                android:text="赞成"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/against7Text"
+                style="@style/style_vote_result_item_text"
+                android:text="反对"/>
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/absent7Text"
+                style="@style/style_vote_result_item_text"
+                android:text="弃权"
+                android:textColor="@color/white"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/miss7Text"
+                style="@style/style_vote_result_item_text"
+                android:text="未按"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/style_vote_result_item_layout">
+
+            <LinearLayout style="@style/style_vote_result_name_layout">
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/number8Text"
+                    style="@style/style_vote_result_number_text"
+                    android:text="1. "/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/name8Text"
+                    style="@style/style_vote_result_name"
+                    android:text="李涛"/>
+
+            </LinearLayout>
+
+            <com.ydd.conference.custom.HuaWenTextView
+
+                android:id="@+id/agree8Text"
+                style="@style/style_vote_result_item_text"
+                android:text="赞成"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/against8Text"
+                style="@style/style_vote_result_item_text"
+                android:text="反对"/>
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/absent8Text"
+                style="@style/style_vote_result_item_text"
+                android:text="弃权"
+                android:textColor="@color/white"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/miss8Text"
+                style="@style/style_vote_result_item_text"
+                android:text="未按"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/style_vote_result_item_layout"
+            android:visibility="gone">
+
+            <LinearLayout style="@style/style_vote_result_name_layout">
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/number9Text"
+                    style="@style/style_vote_result_number_text"
+                    android:text="1. "/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/name9Text"
+                    style="@style/style_vote_result_name"
+                    android:text="李涛"/>
+
+            </LinearLayout>
+
+            <com.ydd.conference.custom.HuaWenTextView
+
+                android:id="@+id/agree9Text"
+                style="@style/style_vote_result_item_text"
+                android:text="赞成"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/against9Text"
+                style="@style/style_vote_result_item_text"
+                android:text="反对"/>
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/absent9Text"
+                style="@style/style_vote_result_item_text"
+                android:text="弃权"
+                android:textColor="@color/white"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/miss9Text"
+                style="@style/style_vote_result_item_text"
+                android:text="未按"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/style_vote_result_item_layout"
+            android:visibility="gone">
+
+            <LinearLayout style="@style/style_vote_result_name_layout">
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/number10Text"
+                    style="@style/style_vote_result_number_text"
+                    android:text="1. "/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/name10Text"
+                    style="@style/style_vote_result_name"
+                    android:text="李涛"/>
+
+            </LinearLayout>
+
+            <com.ydd.conference.custom.HuaWenTextView
+
+                android:id="@+id/agree10Text"
+                style="@style/style_vote_result_item_text"
+                android:text="赞成"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/against10Text"
+                style="@style/style_vote_result_item_text"
+                android:text="反对"/>
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/absent10Text"
+                style="@style/style_vote_result_item_text"
+                android:text="弃权"
+                android:textColor="@color/white"/>
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/miss10Text"
+                style="@style/style_vote_result_item_text"
+                android:text="未按"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.ydd.conference.custom.HuaWenTextView
+        android:id="@+id/pageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="第2页,总共10页"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_5"/>
+
+</LinearLayout>

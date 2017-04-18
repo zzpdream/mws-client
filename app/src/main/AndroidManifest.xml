@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ydd.conference">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CONNECTIVITY_INTERNAL" />
+
+    <application
+        android:name=".config.AppApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:launchMode="singleTask"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!-- <category android:name="android.intent.category.HOME" /> -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.StartRegisterActivity"
+            android:exported="true"
+            android:label="@string/title_activity_report"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.LogoActivity"
+            android:exported="true"
+            android:label="@string/title_activity_logo"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.SubjectActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.TextActivity"
+            android:exported="true"
+            android:label="@string/title_activity_text"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.ShowRegisterActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.SingleVoteResultActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.VoteActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.VoteResultActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.SetSeatActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+
+        <receiver android:name=".receiver.PackageChangeReceiver">
+            <intent-filter>
+                <action android:name="com.ydd.conference.update" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.HelperInstallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receiver.BootCompletedReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".scanner.ScannerExampleActivity" />
+        <activity
+            android:name=".ui.NameActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.FullscreenActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.VoteResultNewActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.VoteNewActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.WithoutRegisterActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity android:name=".ui.VideoActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".ui.ImageActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"/>
+    </application>
+
+</manifest>

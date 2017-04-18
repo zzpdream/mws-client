@@ -1,0 +1,31 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <dimen name="text_size_middle">30sp</dimen>
+    <dimen name="text_size_vote_result">28sp</dimen>
+    <!--<dimen name="text_size_vote_result_name">28sp</dimen>-->
+    <dimen name="text_size_vote_result_name">35sp</dimen>
+    <dimen name="text_size_13">110sp</dimen>
+    <dimen name="text_size_12">100sp</dimen>
+    <dimen name="text_size_11">90sp</dimen>
+    <dimen name="text_size_10">80sp</dimen>
+    <dimen name="text_size_9_10">100sp</dimen>
+    <dimen name="text_size_9">70sp</dimen>
+    <dimen name="text_size_8">60sp</dimen>
+    <dimen name="text_size_7">50sp</dimen>
+    <dimen name="text_size_6_5">45sp</dimen>
+    <dimen name="text_size_6">40sp</dimen>
+    <dimen name="text_size_5">25sp</dimen>
+    <dimen name="text_size_4">20sp</dimen>
+    <dimen name="text_size_name_25">250sp</dimen>
+    <dimen name="text_size_name_20">200sp</dimen>
+    <dimen name="text_size_name_16">160sp</dimen>
+    <dimen name="text_size_name_14">140sp</dimen>
+    <dimen name="text_size_name_7">70sp</dimen>
+
+    <dimen name="text_subject">120dp</dimen>
+</resources>

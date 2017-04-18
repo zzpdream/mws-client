@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+
+android {
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+
+    sourceSets.main {
+        jni.srcDirs = []
+        jniLibs.srcDirs = ['libs']
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            ndk {
+                moduleName "XxSerialPort"
+                abiFilters "armeabi", "armeabi-v7a", "x86"
+                ldLibs  "dl", "log"
+            }
+        }
+
+        debug {
+            ndk {
+                moduleName "XxSerialPort"
+                ldLibs  "dl", "log"
+                //cFlags "-Wall -Wextra -I " + projectDir + "/src/main/jni/include"
+                abiFilters "armeabi", "armeabi-v7a", "x86"
+                //stl "stlport_shared"                      // Use shared stlport library
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}

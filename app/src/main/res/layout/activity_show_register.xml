@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/blue"
+              android:gravity="center"
+              android:orientation="vertical" tools:context=".ui.ShowRegisterActivity">
+
+
+    <com.ydd.conference.custom.HuaWenTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="出席情况"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_10"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/text1"
+                    style="@style/style_report_text"
+                    android:text="应  到："/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/text2"
+                    style="@style/style_report_text"
+                    android:layout_marginTop="25dp"
+                    android:text="实  到："/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/text3"
+                    style="@style/style_report_text"
+                    android:layout_marginTop="25dp"
+                    android:text="缺  席："/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/expectedText"
+                    style="@style/style_report_text"
+                    android:text="25"/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/registeredText"
+                    style="@style/style_report_text"
+                    android:layout_marginTop="25dp"
+                    android:text="25"/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/leaveText"
+                    style="@style/style_report_text"
+                    android:layout_marginTop="25dp"
+                    android:text="5"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    style="@style/style_report_text"
+                    android:text="实到"/>
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    style="@style/style_report_text"
+                    android:layout_marginTop="60dp"
+                    android:text="未到"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:gravity="right"
+
+                android:orientation="vertical">
+
+                <!--<com.ydd.conference.custom.HuaWenTextView-->
+                    <!--android:id="@+id/registeredText"-->
+                    <!--style="@style/style_report_text"-->
+                    <!--android:text="65"/>-->
+
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/absentText"
+                    style="@style/style_report_text"
+                    android:layout_marginTop="60dp"
+                    android:text="5"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.ydd.conference.custom.HuaWenTextView
+        android:id="@+id/registerStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="出席情况"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_9_10"/>
+</LinearLayout>

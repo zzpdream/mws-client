@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/free_speech_red"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ui.WithoutRegisterActivity">
+
+    <com.ydd.conference.custom.HuaWenTextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="上海十四届人大常委会第十九次会议"
+        android:textColor="@color/broom"
+        android:textSize="45sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <com.ydd.conference.custom.HuaWenTextView
+            android:id="@+id/personNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:text="中华人"
+            android:textColor="@color/white"
+            android:textSize="250sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="free_speech_red">#C00001</color>
+
+    <color name="broom">#F8E71C</color>
+    <color name="white">#ffffff</color>
+
+    <color name="blue">#0000FF</color>
+    <color name="blue_1">#00aeff</color>
+
+    <color name="black">#000000</color>
+    <color name="grey">#666666</color>
+
+    <!--<color name="coral_candy">#EE8070</color>-->
+    <color name="coral_candy">#EE8070</color>
+    <!--<color name="coral_candy">#be6659</color>-->
+    <!--<color name="coral_candy">#774038</color>-->
+    <!--<color name="coral_candy">#220099</color>-->
+
+    <color name="red_text">#EF000B</color>
+
+    <color name="geyser">#CAD2D7</color>
+    <color name="geyser1">#D8DDE1</color>
+
+    <color name="zumthor">#CAD2D7</color>
+
+    <color name="flax">#e4752a</color>
+
+
+    <color name="torea_bay">#173295</color>
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/setSeatLayout"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
+
+    <FrameLayout
+        android:id="@+id/setSeatRightLayout"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="right" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="新版本3"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="40dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_site"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_6" />
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/lable_terminal_type"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_6" />
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/ip"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_6" />
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/version"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_6" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/seatIdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/un_setting"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_6" />
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/terminalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/un_setting"
+                android:textColor="@color/white"
+
+                android:textSize="@dimen/text_size_6" />
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/ipText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="0.0.0.0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_6" />
+
+            <com.ydd.conference.custom.HuaWenTextView
+                android:id="@+id/versionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_6"
+                tools:text="v1.0" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.ydd.conference.custom.HuaWenTextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="40dp"
+        android:text="@string/wait_in"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_6" />
+
+</FrameLayout>

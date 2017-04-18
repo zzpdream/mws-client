@@ -1,0 +1,1 @@
+//ndk do not work when there is only one .c(pp) file under the jni folder
