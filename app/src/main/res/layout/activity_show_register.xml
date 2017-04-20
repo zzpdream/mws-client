@@ -4,7 +4,6 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="@color/blue"
-              android:gravity="center"
               android:orientation="vertical" tools:context=".ui.ShowRegisterActivity">
 
 
@@ -14,14 +13,12 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:text="出席情况"
-        android:visibility="gone"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_10"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -36,21 +33,13 @@
                 android:orientation="vertical">
 
                 <com.ydd.conference.custom.HuaWenTextView
-                    android:id="@+id/text1"
                     style="@style/style_report_text"
-                    android:text="应  到："/>
+                    android:text="应到"/>
 
                 <com.ydd.conference.custom.HuaWenTextView
-                    android:id="@+id/text2"
                     style="@style/style_report_text"
-                    android:layout_marginTop="25dp"
-                    android:text="实  到："/>
-
-                <com.ydd.conference.custom.HuaWenTextView
-                    android:id="@+id/text3"
-                    style="@style/style_report_text"
-                    android:layout_marginTop="25dp"
-                    android:text="缺  席："/>
+                    android:layout_marginTop="60dp"
+                    android:text="请假"/>
             </LinearLayout>
 
 
@@ -64,18 +53,12 @@
                 <com.ydd.conference.custom.HuaWenTextView
                     android:id="@+id/expectedText"
                     style="@style/style_report_text"
-                    android:text="25"/>
-
-                <com.ydd.conference.custom.HuaWenTextView
-                    android:id="@+id/registeredText"
-                    style="@style/style_report_text"
-                    android:layout_marginTop="25dp"
-                    android:text="25"/>
+                    android:text="65"/>
 
                 <com.ydd.conference.custom.HuaWenTextView
                     android:id="@+id/leaveText"
                     style="@style/style_report_text"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="60dp"
                     android:text="5"/>
             </LinearLayout>
         </LinearLayout>
@@ -85,7 +68,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:visibility="gone"
             android:orientation="horizontal">
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -111,10 +93,10 @@
 
                 android:orientation="vertical">
 
-                <!--<com.ydd.conference.custom.HuaWenTextView-->
-                    <!--android:id="@+id/registeredText"-->
-                    <!--style="@style/style_report_text"-->
-                    <!--android:text="65"/>-->
+                <com.ydd.conference.custom.HuaWenTextView
+                    android:id="@+id/registeredText"
+                    style="@style/style_report_text"
+                    android:text="65"/>
 
                 <com.ydd.conference.custom.HuaWenTextView
                     android:id="@+id/absentText"
@@ -125,13 +107,5 @@
         </LinearLayout>
     </LinearLayout>
 
-    <com.ydd.conference.custom.HuaWenTextView
-        android:id="@+id/registerStatusText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:text="出席情况"
-        android:textColor="@color/white"
-        android:textSize="@dimen/text_size_9_10"/>
+
 </LinearLayout>

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,8 +32,6 @@ public class StartRegisterActivity extends BaseActivity {
     private TextView registerStatusText;
     private TextView personNameText;
     private ImageView avatarImage;
-    private int width;
-    private boolean onlyShowName;
 
 //    private Scanner scanner;
 
@@ -43,7 +40,6 @@ public class StartRegisterActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_register);
-        width = getWindowManager().getDefaultDisplay().getWidth();
         initData();
         initView();
 
@@ -53,7 +49,6 @@ public class StartRegisterActivity extends BaseActivity {
     private void initData() {
         EventBus.getDefault().post(new StartScannerEvent());
         title = getIntent().getStringExtra("title");
-        onlyShowName=getIntent().getBooleanExtra("onlyShowName",false);
 //        AppApplication.executor.submit(new Runnable() {
 //            @Override
 //            public void run() {
@@ -78,32 +73,7 @@ public class StartRegisterActivity extends BaseActivity {
         } else {
             registerStatusText.setText(R.string.please_register);
         }
-        if(onlyShowName){
-            registerStatusText.setVisibility(View.GONE);
-        }else{
-            registerStatusText.setVisibility(View.VISIBLE);
-        }
         personNameText = (TextView) findViewById(R.id.personNameText);
-        int length = SharedPreferencesUtil.getMemberName().length();
-        if(length<5){
-            nameTextsetTextSize(240);
-        }else if(length==5){
-            nameTextsetTextSize(190);
-        }else if(length==6){
-            nameTextsetTextSize(150);
-        }else if(length==7){
-            nameTextsetTextSize(130);
-        }else if(length==8){
-            nameTextsetTextSize(110);
-        }else if(length==9){
-            nameTextsetTextSize(100);
-        }else if(length==10){
-            nameTextsetTextSize(90);
-        }else if(length>10){
-            nameTextsetTextSize(80);
-//                nameText.setTextSize(75);
-            personNameText.setGravity(Gravity.CENTER);
-        }
         personNameText.setText(SharedPreferencesUtil.getMemberName());
         avatarImage = (ImageView) findViewById(R.id.avatarImage);
         AppApplication.executor.submit(new Runnable() {
@@ -228,15 +198,6 @@ public class StartRegisterActivity extends BaseActivity {
 
     }
 
-
-    private void nameTextsetTextSize(int i) {
-        if (width == 1024) {
-            personNameText.setTextSize(i - 5);
-        } else {
-            personNameText.setTextSize(i);
-        }
-    }
-
     /**
      * 开始读卡轮询
      */
@@ -280,10 +241,9 @@ public class StartRegisterActivity extends BaseActivity {
         ConferenceClientHandler.mCtx.writeAndFlush(registerRequest);
     }
 
-    public static void actionStart(Context context, String title,boolean onlyShowName) {
+    public static void actionStart(Context context, String title) {
         Intent intent = new Intent(context, StartRegisterActivity.class);
         intent.putExtra("title", title);
-        intent.putExtra("onlyShowName", onlyShowName);
         context.startActivity(intent);
     }
 

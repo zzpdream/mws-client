@@ -13,7 +13,7 @@
     <dimen name="text_size_12">100sp</dimen>
     <dimen name="text_size_11">90sp</dimen>
     <dimen name="text_size_10">80sp</dimen>
-    <dimen name="text_size_9_10">100sp</dimen>
+    <dimen name="text_size_9_10">75sp</dimen>
     <dimen name="text_size_9">70sp</dimen>
     <dimen name="text_size_8">60sp</dimen>
     <dimen name="text_size_7">50sp</dimen>
@@ -27,5 +27,5 @@
     <dimen name="text_size_name_14">140sp</dimen>
     <dimen name="text_size_name_7">70sp</dimen>
 
-    <dimen name="text_subject">120dp</dimen>
+    <dimen name="text_subject">90dp</dimen>
 </resources>

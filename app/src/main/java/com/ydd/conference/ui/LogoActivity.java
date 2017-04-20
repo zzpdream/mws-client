@@ -3,8 +3,6 @@ package com.ydd.conference.ui;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
 import android.widget.TextView;
 
 import com.ydd.conference.R;
@@ -52,15 +50,6 @@ public class LogoActivity extends BaseActivity {
             }
             if (stringBuffer.length() > 1) {
                 stringBuffer.delete(stringBuffer.length() - 1, stringBuffer.length());
-            }
-            DisplayMetrics metric = new DisplayMetrics();
-            getWindowManager().getDefaultDisplay().getMetrics(metric);
-            int width = metric.widthPixels;     // 屏幕宽度（像素）
-            int height = metric.heightPixels;
-            if(width==1024){
-                titleText.setTextSize(TypedValue.COMPLEX_UNIT_SP,100);
-            }else {
-                titleText.setTextSize(TypedValue.COMPLEX_UNIT_SP,120);
             }
             titleText.setText(stringBuffer.toString());
         }

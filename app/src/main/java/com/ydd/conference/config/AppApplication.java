@@ -9,12 +9,6 @@ import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
-import com.ydd.conference.R;
 import com.ydd.conference.ui.MainActivity;
 
 import org.xutils.x;
@@ -29,7 +23,6 @@ public class AppApplication extends Application {
 
     public static Context mContext;
     public static ExecutorService executor = Executors.newCachedThreadPool();
-//    public static int emptyImgRes = R.mipmap.zanweitu;
 
     @Override
     public void onCreate() {
@@ -38,20 +31,6 @@ public class AppApplication extends Application {
 
         x.Ext.init(this);
         initCrashRestart();
-        initImageLoader();
-    }
-
-    private void initImageLoader() {
-        DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
-                .cacheInMemory(true).cacheOnDisk(true).build();
-
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
-                getApplicationContext()).defaultDisplayImageOptions(defaultOptions)
-                .threadPriority(Thread.NORM_PRIORITY - 2)
-                .denyCacheImageMultipleSizesInMemory()
-                .diskCacheFileNameGenerator(new Md5FileNameGenerator())
-                .tasksProcessingOrder(QueueProcessingType.LIFO).build();
-        ImageLoader.getInstance().init(config);
     }
 
 

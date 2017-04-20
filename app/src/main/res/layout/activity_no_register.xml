@@ -15,7 +15,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
-        android:visibility="gone"
         android:text="上海十四届人大常委会第十九次会议"
         android:textColor="@color/broom"
         android:textSize="45sp" />
@@ -32,7 +31,7 @@
             android:layout_marginTop="20sp"
             android:text="中华人"
             android:textColor="@color/white"
-            android:textSize="250sp" />
+            android:textSize="120sp" />
 
     </LinearLayout>
 

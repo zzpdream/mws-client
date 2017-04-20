@@ -151,10 +151,10 @@ public class MainActivity extends BaseActivity {
         }
 
         //add by lt 座位号132 固定显示视频
-//        if (SharedPreferencesUtil.getSeatId().equals("132")) {
-//            FullscreenActivity.actionStart(MainActivity.this, Constant.VIDEO_URL2, true);
-//            return;
-//        }
+        if (SharedPreferencesUtil.getSeatId().equals("132")) {
+            FullscreenActivity.actionStart(MainActivity.this, Constant.VIDEO_URL2, true);
+            return;
+        }
 
         if (type.equals(Constant.Terminal_SECOND)) {
             NameActivity.actionStart(MainActivity.this);

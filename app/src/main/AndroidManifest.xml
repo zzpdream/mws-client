@@ -139,10 +139,6 @@
             android:exported="true"
             android:launchMode="singleTask"
             android:screenOrientation="landscape"/>
-        <activity android:name=".ui.ImageActivity"
-            android:exported="true"
-            android:launchMode="singleTask"
-            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

@@ -17,11 +17,9 @@
 
     <!--<color name="coral_candy">#EE8070</color>-->
     <color name="coral_candy">#EE8070</color>
-    <!--<color name="coral_candy">#be6659</color>-->
-    <!--<color name="coral_candy">#774038</color>-->
-    <!--<color name="coral_candy">#220099</color>-->
-
-    <color name="red_text">#EF000B</color>
+    <color name="coral_candy1">#EE9070</color>
+    <color name="coral_candy3">#e4752a</color>
+    <color name="coral_candy2">#E86670</color>
 
     <color name="geyser">#CAD2D7</color>
     <color name="geyser1">#D8DDE1</color>

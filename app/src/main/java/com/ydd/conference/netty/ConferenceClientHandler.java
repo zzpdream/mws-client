@@ -8,12 +8,10 @@ import com.ydd.conference.config.Constant;
 import com.ydd.conference.entity.ChairmanRequest;
 import com.ydd.conference.entity.HeartBeatRequest;
 import com.ydd.conference.entity.HeartBeatResponse;
-import com.ydd.conference.entity.ImageRequest;
 import com.ydd.conference.entity.Message;
 import com.ydd.conference.entity.SeatRequest;
 import com.ydd.conference.entity.SetSeatInfoRequest;
 import com.ydd.conference.entity.ShowLogoRequest;
-import com.ydd.conference.entity.ShowMemRequest;
 import com.ydd.conference.entity.ShowRegisterRequest;
 import com.ydd.conference.entity.ShowSubjectRequest;
 import com.ydd.conference.entity.StartPlayVideoRequest;
@@ -32,7 +30,6 @@ import com.ydd.conference.event.UpdateNameEvent;
 import com.ydd.conference.event.VoteSuccessEvent;
 import com.ydd.conference.ui.ActivityActionUtil;
 import com.ydd.conference.ui.FullscreenActivity;
-import com.ydd.conference.ui.ImageActivity;
 import com.ydd.conference.ui.LogoActivity;
 import com.ydd.conference.ui.MainActivity;
 import com.ydd.conference.ui.NameActivity;
@@ -113,10 +110,11 @@ public class ConferenceClientHandler extends ChannelHandlerAdapter {
                 responseMessage.setStatus(Message.STATUS_SUCCESS);
 
                 //add by lt 132座位号固定显示视频
-//                if (SharedPreferencesUtil.getSeatId().equals("132") && command.status != Command.SHOW_LOGO.status) {
-//                    ctx.writeAndFlush(responseMessage);
-//                    return;
-//                }
+                if (SharedPreferencesUtil.getSeatId().equals("132") && command.status != Command.SHOW_LOGO.status) {
+                    ctx.writeAndFlush(responseMessage);
+                    return;
+                }
+
                 switch (command) {
                     case CLEAR_SEAT:
                         SeatRequest clearSeat = JsonMapper.fromJson(message, SeatRequest.class);
@@ -163,7 +161,7 @@ public class ConferenceClientHandler extends ChannelHandlerAdapter {
                                 //如果是正式终端有表决权,并且是报道轮询状态,那么开启轮询 add by lt
                                 if (setSeatInfoParams.getRegistered() == 1) {
                                     if (setSeatInfoParams.getVotingRights() == 1) {
-                                        StartRegisterActivity.actionStart(mContext, setSeatInfoParams.getTitle(),false);
+                                        StartRegisterActivity.actionStart(mContext, setSeatInfoParams.getTitle());
                                     } else {
                                         WithoutRegisterActivity.actionStart(mContext, setSeatInfoParams.getTitle());
                                         EventBus.getDefault().post(new StopScannerEvent());
@@ -248,12 +246,12 @@ public class ConferenceClientHandler extends ChannelHandlerAdapter {
                          * 终端匿名访问的跳转  modify by ranfi 2016-07-17 20:30
                          */
                         if(SharedPreferencesUtil.hasAnonAccessPermission()){
-                        ActivityActionUtil.showLogoActivityByAnonAuth(mContext,titles);
-                        return;
-                    }
+                            ActivityActionUtil.showLogoActivityByAnonAuth(mContext,titles);
+                            return;
+                        }
 
                         //add by lt 132座位号固定显示视频
-                        if (SharedPreferencesUtil.getSeatId().equals("10000")) {
+                        if (SharedPreferencesUtil.getSeatId().equals("132")) {
                             EventBus.getDefault().post(new ShowSecondEvent());
                             ctx.writeAndFlush(responseMessage);
                             return;
@@ -293,37 +291,11 @@ public class ConferenceClientHandler extends ChannelHandlerAdapter {
                         if (SharedPreferencesUtil.getVotingRights() == Constant.NO_VOTE_RIGHT) {
                             WithoutRegisterActivity.actionStart(mContext, startRegisterParams.getTitle());
                         } else {
-                            StartRegisterActivity.actionStart(mContext, startRegisterParams.getTitle(),false);
+                            StartRegisterActivity.actionStart(mContext, startRegisterParams.getTitle());
                         }
                         ctx.writeAndFlush(responseMessage);
                         break;
-                    case SHOW_MEMBER:
-                        if(!SharedPreferencesUtil.hasAdvancedMeetingPermission()){
-                            return;
-                        }
-                        ShowMemRequest showMemRequest = JsonMapper.fromJson(message, ShowMemRequest.class);
-                        ShowMemRequest.StartRegisterParams showMemParams = showMemRequest.getParams();
-                        if (null == showMemRequest) {
-                            responseMessage.setStatus(Message.STATUS_UNKNOWN);
-                            ctx.writeAndFlush(responseMessage);
-                            return;
-                        }
 
-                        //如果主机发送的座位号和本地不一致
-                        if (!SharedPreferencesUtil.seatIdIsRight(showMemParams.getSeatId())) {
-                            responseMessage.setStatus(Message.STATUS_SEAT_UN_CONSISTENT);
-                            ctx.writeAndFlush(responseMessage);
-                            return;
-                        }
-                        Constant.registerTitle = showMemParams.getTitle();
-                        //modify by ranfi 2016.4.13 2:26
-                        if (SharedPreferencesUtil.getVotingRights() == Constant.NO_VOTE_RIGHT) {
-                            WithoutRegisterActivity.actionStart(mContext, showMemParams.getTitle());
-                        } else {
-                            StartRegisterActivity.actionStart(mContext, showMemParams.getTitle(),true);
-                        }
-                        ctx.writeAndFlush(responseMessage);
-                        break;
                     case SHOW_REGISTER:
                         if(!SharedPreferencesUtil.hasAdvancedMeetingPermission()){
                             return;
@@ -426,7 +398,7 @@ public class ConferenceClientHandler extends ChannelHandlerAdapter {
                                 } else {
                                     if (startVoteParams.getType().equals(Message.TYPE_SINGLE_VOTE + "")) {
                                         Constant.isSingleVote = true;
-                                        Constant.textTitle = "现在开始表决\n请按表决器";
+                                        Constant.textTitle = "现在开始表决\n请按表决键";
                                         TextActivity.actionStart(mContext);
                                     } else {
                                         Constant.isSingleVote = false;
@@ -488,7 +460,7 @@ public class ConferenceClientHandler extends ChannelHandlerAdapter {
                         SeatRequest.SeatParams seatParams = startSpeakRequest.getParams();
                         if (seatParams != null) {
                             if (SharedPreferencesUtil.seatIdIsRight(seatParams.getSeatId())) {
-                                Constant.textTitle = "发表意见\n请按“发言键”申请";
+                                Constant.textTitle = "现在开始申请发言\n请按发言键";
                                 TextActivity.actionStart(mContext);
                             } else {
                                 responseMessage.setStatus(Message.STATUS_SEAT_UN_CONSISTENT);
@@ -586,16 +558,6 @@ public class ConferenceClientHandler extends ChannelHandlerAdapter {
                     //停止播放视频   add by lt  v2.0
                     case STOP_PLAY_VIDEO:
                         EventBus.getDefault().post(new StopVideoEvent());
-                        ctx.writeAndFlush(responseMessage);
-                        break;
-                    case SHOW_IMAGE:
-                        ImageRequest imageRequest=JsonMapper.fromJson(message,ImageRequest.class);
-                        ImageRequest.Params imageRquestParams = imageRequest.params;
-                        if(imageRquestParams!=null){
-                            ImageActivity.actionStart(mContext,imageRquestParams.getImageUrl());
-                        }else {
-                            responseMessage.setStatus(Message.STATUS_COMMAND_ERROR);
-                        }
                         ctx.writeAndFlush(responseMessage);
                         break;
                 }

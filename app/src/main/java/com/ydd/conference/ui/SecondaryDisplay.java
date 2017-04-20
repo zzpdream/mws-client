@@ -136,6 +136,8 @@ public class SecondaryDisplay extends Presentation {
         super.onCreate(saveInstanceState);
         if (width == 1280 && height == 800) {
             setContentView(R.layout.activity_name_1280x800);
+        } else if (width == 1366 && height == 768) {
+            setContentView(R.layout.activity_name_1366_2);
         } else {
             setContentView(R.layout.activity_name);
         }

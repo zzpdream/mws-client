@@ -16,8 +16,6 @@ import com.ydd.conference.event.ShowSecondEvent;
 import com.ydd.conference.util.SharedPreferencesUtil;
 import com.ydd.conference.util.StringUtils;
 
-import de.greenrobot.event.EventBus;
-
 public class NameActivity extends BaseActivity {
 
     private FrameLayout setSeatLayout;
@@ -26,13 +24,17 @@ public class NameActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (SharedPreferencesUtil.getTerminalType().equals(Constant.Terminal_FIRST)) {
-            if(SharedPreferencesUtil.hasAnonAccessPermission()){
+            if (SharedPreferencesUtil.hasAnonAccessPermission()) {
                 setContentView(R.layout.activity_name_anon);
             } else {
                 setContentView(R.layout.activity_name);
             }
         } else {
-            setContentView(R.layout.activity_name_big);
+            if (getWindowManager().getDefaultDisplay().getWidth() == 1366 && getWindowManager().getDefaultDisplay().getHeight() == 720) {
+                setContentView(R.layout.activity_name_1366);
+            } else {
+                setContentView(R.layout.activity_name_big);
+            }
         }
         initView();
     }
@@ -122,8 +124,8 @@ public class NameActivity extends BaseActivity {
         super.onEventMainThread(event);
         if (event instanceof ShowSecondEvent) {
             initView();
-        }else if(event instanceof SecondaryLogoEvent){
-            if(null == secondaryLogoDisplay){
+        } else if (event instanceof SecondaryLogoEvent) {
+            if (null == secondaryLogoDisplay) {
                 return;
             }
             secondaryLogoDisplay.load(((SecondaryLogoEvent) event).getTitles());

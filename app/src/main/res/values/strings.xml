@@ -12,13 +12,9 @@
     <string name="has_in">已接入</string>
     <string name="title_activity_text">TextActivity</string>
     <string name="has_register">您已报到</string>
-    <string name="please_register">请您刷卡报到</string>
+    <string name="please_register">请您插卡报到</string>
     <string name="hide_bar">隐藏虚拟按键</string>
     <string name="show_bar">显示虚拟按键</string>
-    <string name="have_passed">通　过</string>
-    <string name="have_not_passed">未通过</string>
-    <string name="apply_laws_num">符合法定人数</string>
-    <string name="not_apply_laws_num">不符合法定人数</string>
 
 
     <string name="hello_world">Hello world!</string>

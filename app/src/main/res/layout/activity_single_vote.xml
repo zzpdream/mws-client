@@ -14,60 +14,52 @@
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
         android:text="表决结果"
-        android:visibility="gone"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_10"/>
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
 
             <com.ydd.conference.custom.HuaWenTextView
-                android:id="@+id/text1"
+                android:id="@+id/huaWenTextView"
                 style="@style/style_report_text"
                 android:layout_width="wrap_content"
-                android:text="赞  成 :"/>
+                android:text="赞成:"/>
 
             <com.ydd.conference.custom.HuaWenTextView
-                android:id="@+id/text2"
                 style="@style/style_report_text"
                 android:layout_width="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="反  对 :"/>
+                android:layout_marginTop="30dp"
+                android:text="反对:"/>
 
             <com.ydd.conference.custom.HuaWenTextView
-                android:id="@+id/text3"
                 style="@style/style_report_text"
                 android:layout_width="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="30dp"
 
-                android:text="弃  权 :"/>
-            <com.ydd.conference.custom.HuaWenTextView
-                android:id="@+id/text4"
-                style="@style/style_report_text"
-                android:layout_width="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="未  按 :"/>
+                android:text="弃权:"/>
 
         </LinearLayout>
 
         <LinearLayout android:layout_width="wrap_content"
                       android:layout_height="match_parent"
+                      android:layout_weight="1"
                       android:gravity="center">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginLeft="60dp"
+                android:layout_gravity="center"
                 android:layout_toLeftOf="@+id/pLabel"
                 android:orientation="vertical">
 
@@ -79,20 +71,15 @@
                 <com.ydd.conference.custom.HuaWenTextView
                     android:id="@+id/againstText"
                     style="@style/style_report_text"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="20dp"
                     android:text="1"/>
 
                 <com.ydd.conference.custom.HuaWenTextView
                     android:id="@+id/abstainText"
                     style="@style/style_report_text"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="20dp"
                     android:text="0"/>
 
-                <com.ydd.conference.custom.HuaWenTextView
-                    android:id="@+id/noOperateText"
-                    style="@style/style_report_text"
-                    android:layout_marginTop="15dp"
-                    android:text="0"/>
             </LinearLayout>
 
 
@@ -101,7 +88,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:visibility="gone"
                 android:layout_marginLeft="20dp"
                 android:orientation="vertical">
 
@@ -118,14 +104,9 @@
                     style="@style/style_report_text"
                     android:layout_marginTop="20dp"
                     android:text="票"/>
-
-                <com.ydd.conference.custom.HuaWenTextView
-                    style="@style/style_report_text"
-                    android:layout_marginTop="20dp"
-                    android:text="票"
-                    android:id="@+id/huaWenTextView" />
             </LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
     <com.ydd.conference.custom.HuaWenTextView
         android:id="@+id/missText"
@@ -134,7 +115,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/red_text"
-        android:text="通过or未通过"
+        android:text="有0人未按表决器"
+        android:textColor="@color/white"
         android:textSize="@dimen/text_size_6"/>
+
 </LinearLayout>

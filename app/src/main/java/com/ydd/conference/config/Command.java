@@ -4,6 +4,8 @@ package com.ydd.conference.config;
  * Created by hehelt on 16/2/26.
  */
 
+import java.util.IllegalFormatCodePointException;
+
 /**
  * 代表主机和代表终端通讯的命令字定义
  * <p/>
@@ -37,8 +39,6 @@ public enum Command {
 
     SHOW_SUBJECT("showSubject", "显示议程", 31),
 
-    SHOW_MEMBER("showMember", "显示姓名", 32),
-
     START_REGISTER("startRegister", "开始报到", 40),
 
     SHOW_REGISTER("showRegister", "显示报到", 41),
@@ -64,12 +64,7 @@ public enum Command {
 
     SET_SPEAKING("setSpeaking", "设置正在发言人", 62),
 
-    CANCEL_SPEAKING("cancelSpeaking", "取消和结束正在发言", 63),
-
-    SHOW_IMAGE("showimage","设置屏保",64);
-
-
-
+    CANCEL_SPEAKING("cancelSpeaking", "取消和结束正在发言", 63);
 
 
 

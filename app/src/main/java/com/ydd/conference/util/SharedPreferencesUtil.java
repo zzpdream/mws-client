@@ -24,8 +24,6 @@ public class SharedPreferencesUtil {
 
     private static SharedPreferences serverShare;
 
-    private static SharedPreferences totalShare;
-
 
     /**
      * 是否是正式终端
@@ -76,21 +74,6 @@ public class SharedPreferencesUtil {
         if (pictureShare == null) {
             pictureShare = AppApplication.mContext.getSharedPreferences("picture", Context.MODE_PRIVATE);
         }
-    }
-
-    private static void initTotalNum(){
-        if(totalShare==null){
-            totalShare = AppApplication.mContext.getSharedPreferences("totalNum",Context.MODE_PRIVATE);
-        }
-    }
-
-    public static void saveTotal(int num){
-        initTotalNum();
-        totalShare.edit().putInt("total",num).commit();
-    }
-    public static int getTotal(){
-        initTotalNum();
-        return totalShare.getInt("total",0);
     }
 
     public static void saveMd5(String md5) {
