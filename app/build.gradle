@@ -8,8 +8,8 @@ android {
         applicationId "com.ydd.conference"
         minSdkVersion 17
         targetSdkVersion 21
-        versionCode 44
-        versionName "2.9.5"
+        versionCode 45
+        versionName "2.9.6"
     }
 
     signingConfigs {

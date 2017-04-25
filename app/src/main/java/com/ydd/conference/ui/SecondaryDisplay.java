@@ -145,8 +145,8 @@ public class SecondaryDisplay extends Presentation {
         backgroundView = findViewById(R.id.backgroundView);
         logoImage = (ImageView) findViewById(R.id.logoImage);
         if (SharedPreferencesUtil.getTerminalType().equals(Constant.Terminal_FIRST)) {
-            float fact = 0.5f;
-            backgroundView.setBackgroundColor(Color.rgb((int) (250 * fact), (int) (110 * fact), (int) (88 * fact)));
+            float fact = 0.9f;
+            backgroundView.setBackgroundColor(Color.rgb((int) (238 * fact), (int) (59 * fact), (int) (59 * fact)));
 //            changeImage(90);
         } else {
 //            logoImage.setImageResource(R.mipmap.icon_logo_new);
